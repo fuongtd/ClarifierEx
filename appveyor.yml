@@ -11,11 +11,7 @@ build_script:
 - cmd: >-
     appveyor-retry nuget restore Clarifier.sln
     
-    msbuild Clarifier.sln /p:Configuration=Release /m /verbosity:normal /p:WarningLevel=0 /logger:"C:\Program Files\AppVeyor\BuildAgent\Appveyor.MSBuildLogger.dll"
-
-    appveyor-retry nuget restore ConfuserEx\Confuser2.sln
-    
-    msbuild ConfuserEx\Confuser2.sln /p:Configuration=Release /m /verbosity:normal /p:WarningLevel=0 /logger:"C:\Program Files\AppVeyor\BuildAgent\Appveyor.MSBuildLogger.dll"
+    msbuild Clarifier.sln /p:Configuration=Release /m /verbosity:normal /p:WarningLevel=0 /logger:"C:\Program Files\AppVeyor\BuildAgent\Appveyor.MSBuildLogger.dll"  
 artifacts:
 - path: Clarifier
   name: Clarifier
